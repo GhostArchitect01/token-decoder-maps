@@ -1,0 +1,11 @@
+::TASK-ID::  
+- **Title:** [Short, clear title of the task]  
+- **Category:** [Optional grouping label, e.g., #ProjectName, #Admin, #Research]  
+- **Status:** [Planned | In Progress | Completed | Blocked | Cancelled]  
+- **Priority:** [Low | Medium | High | Critical]  
+- **Dependencies:** [Other ::TASK-ID:: tokens if any]  
+- **Owner:** [Optional: who is responsible]  
+- **Deadline:** [Optional: YYYY-MM-DD format]  
+- **Created:** [Auto-assigned or manual date YYYY-MM-DD]  
+- **Tags:** [#Flexible #Tag #List]  
+- **Notes:** [Freeform details or sub-steps]
