@@ -2,7 +2,7 @@ Here are symbolic tokens to define and structure your **P2P Forum System**—des
 
 ---
 
-## ::FORUM-TOKEN-CONTAINER::
+## ::EN-FORUM-TOKEN-CONTAINER::
 
 - **Type:** Infrastructure
 - **Summary:** A content-addressed, cryptographically-signed unit of discourse containing a full forum "season" of threads and posts. Represents a sealed block of conversation.
@@ -11,7 +11,7 @@ Here are symbolic tokens to define and structure your **P2P Forum System**—des
 
 ---
 
-## ::THREAD-TOKEN-FRAGMENT::
+## ::EN-THREAD-TOKEN-FRAGMENT::
 
 - **Type:** Data Structure
 - **Summary:** A child unit within a container representing a single thread of discussion. May itself be split into multiple sub-tokens once a post limit is reached.
@@ -20,7 +20,7 @@ Here are symbolic tokens to define and structure your **P2P Forum System**—des
 
 ---
 
-## ::TRIP-TOKEN-IDENTITY::
+## ::EN-TRIP-TOKEN-IDENTITY::
 
 - **Type:** Identity Layer
 - **Summary:** A deterministic, pseudonymous identity derived from a user-submitted string, hashed and encoded into a unique identifier consistent across all forum containers.
@@ -29,7 +29,7 @@ Here are symbolic tokens to define and structure your **P2P Forum System**—des
 
 ---
 
-## ::SEASON-TOKEN-LINK::
+## ::EN-SEASON-TOKEN-LINK::
 
 - **Type:** Chronological Anchor
 - **Summary:** A parent-child relationship marker between container "seasons," allowing clients to trace back through sealed forum epochs.
@@ -38,7 +38,7 @@ Here are symbolic tokens to define and structure your **P2P Forum System**—des
 
 ---
 
-## ::PEER-TOKEN-CLIENT::
+## ::EN-PEER-TOKEN-CLIENT::
 
 - **Type:** Execution Role
 - **Summary:** The runtime that executes container validation, thread rendering, post signing, and token indexing. Acts as both viewer and seeder.
