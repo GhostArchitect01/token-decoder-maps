@@ -1,0 +1,44 @@
+# Gitignore for Token Decoder Framework
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Obsidian Specific Files (already removed, but good to ignore)
+.obsidian/
+
+# Temporary Files
+*.tmp
+*.bak
+*~
+
+# Logs
+*.log
+
+# Build Artifacts (if any are introduced later)
+build/
+dist/
+
+# Node.js (if applicable)
+node_modules/
+
+# Python (if applicable)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Other common ignored files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Custom additions
+Untitled/
