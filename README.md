@@ -183,7 +183,11 @@ The vision for Token Decoder Maps is ambitious. Future development is focused on
 
 ## Contributing
 
-This is an open-source project, and contributions are welcome! Please see the `CONTRIBUTING.md` file for guidelines on how to submit issues, feature requests, and pull requests. The best way to contribute right now is to use the framework and report your experiences.
+This is an open-source project, and contributions are welcome! We encourage you to engage with the community by:
+*   **Reporting Issues:** If you find a bug or have a feature request, please open an issue on our [GitHub Issues page](https://github.com/GhostArchitect01/token-decoder-maps/issues).
+*   **Joining Discussions:** For questions, ideas, or general discussions, visit our [GitHub Discussions page](https://github.com/GhostArchitect01/token-decoder-maps/discussions).
+*   **Submitting Pull Requests:** Please see the `CONTRIBUTING.md` file for guidelines on how to submit pull requests.
+The best way to contribute right now is to use the framework and report your experiences.
 
 ## License
 
