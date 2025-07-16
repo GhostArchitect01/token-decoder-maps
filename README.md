@@ -59,9 +59,9 @@ This example assumes you have gemini-cli installed and authenticated.
 [1]: For installation and authentication instructions, please refer to the official `gemini-cli` documentation.
 
 1.  **Create your master context file:**
-    Create a file named `nGEMINI.md` in your home directory (`~/.gemini/`) and paste the contents of the `nGEMINI.md` from this repository into it. This file acts as the "operating system" for your AI agent.
+    Create a file named `GEMINI.md` in your home directory (`~/.gemini/`) and paste the contents of the `GEMINI.md` from this repository into it. This file acts as the "operating system" for your AI agent.
 
-[2]: The `nGEMINI.md` file serves as the primary configuration and directive file for the AI agent, defining its core behaviors, operational protocols, and understanding of the Token Decoder Framework. It's essential for the agent to interpret and utilize TDM tokens effectively.
+[2]: The `GEMINI.md` file serves as the primary configuration and directive file for the AI agent, defining its core behaviors, operational protocols, and understanding of the Token Decoder Framework. It's essential for the agent to interpret and utilize TDM tokens effectively.
 
 2.  **Create a project and a metrica.md file:**
     ```bash
@@ -162,17 +162,17 @@ The true power of Token Decoder Maps lies in its extensibility. Users are not li
 *   **Personalized AI Behavior:** Fine-tune how the AI agent interprets instructions, processes information, and interacts with your environment.
 *   **Scalable Knowledge Base:** Build a growing library of reusable tokens that can be shared across projects or teams, fostering consistency and efficiency.
 
-To extend the framework, simply define your new tokens within your `nGEMINI.md` file (or other context files loaded by your `gemini-cli` setup). The agent will then interpret and utilize these custom tokens in its interactions.
+To extend the framework, simply define your new tokens within your `GEMINI.md` file (or other context files loaded by your `gemini-cli` setup). The agent will then interpret and utilize these custom tokens in its interactions.
 
-[5]: For detailed guidance on defining custom tokens and integrating them into your `nGEMINI.md` file, refer to the `docs/token_definitions.md` and `docs/prompt_interaction_guide.md` documentation.
+[5]: For detailed guidance on defining custom tokens and integrating them into your `GEMINI.md` file, refer to the `docs/token_definitions.md` and `docs/prompt_interaction_guide.md` documentation.
 
 ## Roadmap
 
 The vision for Token Decoder Maps is ambitious. Future development is focused on:
 
-*   **Dynamic `nGEMINI.md` Generation:** Creating scripts to programmatically generate context files tailored to specific tasks (e.g., creative writing, legal analysis, code reviews).
+*   **Dynamic `GEMINI.md` Generation:** Creating scripts to programmatically generate context files tailored to specific tasks (e.g., creative writing, legal analysis, code reviews).
 
-[6]: This feature aims to automate the creation of specialized `nGEMINI.md` configurations, allowing users to quickly set up the AI agent with a context optimized for a particular domain or task, reducing manual setup and ensuring consistency.
+[6]: This feature aims to automate the creation of specialized `GEMINI.md` configurations, allowing users to quickly set up the AI agent with a context optimized for a particular domain or task, reducing manual setup and ensuring consistency.
 *   **Full MCP Server Implementation:** Migrating the core framework logic into a dedicated Model Context Protocol (MCP) server to eliminate the context window bottleneck and allow any MCP-compatible agent to use TDM.
 
 [7]: The Model Context Protocol (MCP) is a proposed standard for externalizing and managing the context of AI models, allowing for more efficient and scalable interactions.
