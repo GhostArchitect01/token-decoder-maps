@@ -166,6 +166,12 @@ To extend the framework, simply define your new tokens within your `GEMINI.md` f
 
 [5]: For detailed guidance on defining custom tokens and integrating them into your `GEMINI.md` file, refer to the `docs/token_definitions.md` and `docs/prompt_interaction_guide.md` documentation.
 
+## Important Considerations for Token Usage
+
+*   **Token Portability:** Tokens are generally not portable across different LLMs. They are designed as symbolically compressed summaries for an LLM's internal use, and their interpretation can vary between models.
+*   **LLM Interpretation of Tokens:** When prompting, simply mentioning a token name in prose (e.g., "use SY-PROMPT-PRIMER") is functionally equivalent to using the full `::PREFIX-TOKEN-NAME::` structure (e.g., `::SY-PROMPT-PRIMER::`). This is due to the LLM's tokenization and pattern recognition capabilities.
+*   **Error Handling for Malformed Tokens:** The framework does not have explicit error handling for malformed tokens or incorrect DSL usage. The LLM's behavior in such cases may vary, potentially leading to ignored tokens or inconsistent results.
+
 ## Roadmap
 
 The vision for Token Decoder Maps is ambitious. Future development is focused on:
