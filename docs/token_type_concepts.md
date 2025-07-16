@@ -18,14 +18,14 @@ Good. Here's a **starter structure** for defining token formats by purpose, base
 
 ---
 
-### **2. ::CONTEXT-TOKEN::**
+### **2. ::EN-CONTEXT-TOKEN::**
 
 **Purpose:** Domain/topic framing  
 **Format:**
 
 ```markdown
-## ::TOPIC-AREA::  
-- **Type:** Context  
+## ::EN-TOPIC-AREA::  
+- **Type:** Entity  
 - **Summary:** Defines the semantic range or domain  
 - **Tags:** #Context, #Domain, #(e.g., #Philosophy, #ForumMemory)  
 - **Expanded Entry:**  
@@ -67,14 +67,14 @@ System-level flag instructing process behavior when conditions are met.
 
 ---
 
-### **5. ::CONTENT-TOKEN::**
+### **5. ::EN-CONTENT-TOKEN::**
 
 **Purpose:** Pure data indexing or compression  
 **Format:**
 
 ```markdown
-## ::TOKEN-NAME::  
-- **Type:** Content  
+## ::EN-TOKEN-NAME::  
+- **Type:** Entity  
 - **Summary:** Core idea/entry (forum post, logline, argument)  
 - **Tags:** #Content, #(e.g., #Forum, #Narrative, #PostFragment)  
 - **Expanded Entry:**  

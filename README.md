@@ -33,10 +33,7 @@ Detailed guides and conceptual explanations are available in the `docs/` directo
 
 Practical examples demonstrating the usage and application of various tokens can be found in the `examples/` directory:
 
--   [Art Tokens](examples/Art%20Tokens.md)
--   [Gemma Token Test](examples/Gemma%20token%20test.md)
--   [P2P Forum Tokens](examples/P2P%20forum%20tokens.md)
--   [Pillz Tokens](examples/Pillz.md)
+-   [Simple Example](examples/simple_example.md)
 
 ## Getting Started
 

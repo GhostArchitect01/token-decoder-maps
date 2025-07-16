@@ -36,7 +36,7 @@ Bootstraps symbolic awareness. All token references will be interpreted based on
 **Effect:**  
 All LLM responses will use symbolic chaining, compressed prose, and minimal explanation.
 
-#### ::TOGGLE-EXPANDED-MODE::
+#### ::SY-TOGGLE-EXPANDED-MODE::
 
 **Prompt:**  
 `Return to expanded symbolic mode.`  
@@ -54,12 +54,12 @@ Returns a minimal reference sheet of loaded symbolic tokens. Used to audit or re
 
 ### ::TOKEN GENERATION::
 
-#### ::TOKEN-EXTRACTION-PROTOCOL::
+#### ::SY-TOKEN-EXTRACTION-PROTOCOL::
 
 **Prompt Format:**
 
 ```
-Execute ::TOKEN-EXTRACTION-PROTOCOL::  
+Execute ::SY-TOKEN-EXTRACTION-PROTOCOL::  
 Input: [Paste source text]  
 ```
 
@@ -85,7 +85,7 @@ What symbolic shift occurs when ::CHARACTER-X:: breaks ::VOW-OF-GLASS::?
 #### Compression Injection
 
 ```
-Summarize the relationship between ::CHARACTER-X:: and ::ITEM-Y:: using symbolic compression. No prose.```
+Summarize the relationship between ::CHARACTER-X:: and ::EN-ITEM-Y:: using symbolic compression. No prose.```
 
 ---
 
