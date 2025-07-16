@@ -60,7 +60,7 @@ This template is for capturing any general-purpose information that doesn't fit 
 ```markdown
 ::EN-TOKEN-NAME::
 - **Type:** [Fact | Concept | Definition | Person | Organization]
-- **Summary:** [A brief, one-sentence description of the entity.]
+- **Summary:** [Short 1–2 line compressed essence of the token.]
 - **Tags:** [#General, #Data, #Fact, #Reference]
 - **Expanded Entry:** [The full value or detailed structure of the entity.]
 ```
