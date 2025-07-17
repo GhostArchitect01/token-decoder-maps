@@ -5,7 +5,7 @@ In this model:
  * The Viewer: Obsidian acts as a powerful, real-time visualization layer. Since it operates directly on a local folder of Markdown files, any changes made by gemini-cli are instantly reflected in Obsidian's interface, including its graph view and canvas features.
 This creates a seamless workflow where you can command the AI from the terminal and immediately see the structured results in a rich visual environment.
 ## Setting Up the Environment (advanced/optional)
-+ ###### Simply running gemini-cli from the Vault directory is more reliable but less convenient method.  The environment below should be plug & play for Windows & Linux but may not be so simple on Android/Termux
++ ###### Simply running gemini-cli from the Vault directory is a more reliable but less convenient method.  The environment below should be plug & play for Windows & Linux but may not be so simple on Android/Termux
 
 This workflow requires no complex integration, only that both applications operate on the same directory.
  * The Foundation: Your Obsidian Vault
