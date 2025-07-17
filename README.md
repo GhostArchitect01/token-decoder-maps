@@ -127,6 +127,8 @@ Example `::EN-` Token:
 
 ## Advanced Usage & Concepts
 
+For a detailed guide on integrating TDM with knowledge management tools like Obsidian, see [Advanced Usage: A Headless Knowledge Management Architecture with Obsidian](docs/advanced_usage.md).
+
 (This is where you can add more detailed documentation, linking to a wiki or a `/docs` folder for more complex topics).[2, 3, 4]
 
 ### The "Metrica" Task Management Protocol
