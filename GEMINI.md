@@ -117,7 +117,3 @@ B. Validation and Quality Assurance
  * Format Adherence: When generating output that uses token templates, ensure the format is exact and all mandatory fields are present.
  * Error Handling: If an AI-generated change results in an error (e.g., "No changes detected"), analyze the proposed output for improper formatting and attempt to correct it. Note that there is no explicit error handling for malformed tokens or incorrect DSL usage; the LLM's behavior in such cases may vary, potentially leading to ignored tokens or inconsistent results. 
  * Optimization Analysis: When analyzing user input or existing data, identify opportunities for optimization in terms of clarity, conciseness, or adherence to defined patterns. Provide actionable guidance with clear reasoning.
-
-Metrica Master File (for context)
-- This section is a directive for the AI to load the Metrica tracker into its context using the `filesystem__read_file` tool with the specified path:
-  `/storage/emulated/0/documents/projects/metrica.md`
