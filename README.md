@@ -140,7 +140,7 @@ The Metrica system provides a robust, stateful task management solution by lever
 
 This protocol allows you to manage complex projects by breaking them down into discrete, trackable tasks, all while maintaining a clear, auditable history.
 
-[3]: For a detailed explanation of the Metrica protocol and its token structure, refer to `docs/metrica_protocol.md`.
+[3]: For a detailed explanation of the Metrica protocol and its token structure, refer to `docs/metrica_protocol.md`. For a practical example of implementing Metrica, see `examples/metrica_protocol_example.md`.
 
 ### Dynamic Personas
 
