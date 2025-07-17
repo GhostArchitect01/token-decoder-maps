@@ -128,6 +128,7 @@ Example `::EN-` Token:
 ## Advanced Usage & Concepts
 
 For a detailed guide on integrating TDM with knowledge management tools like Obsidian, see [Advanced Usage: A Headless Knowledge Management Architecture with Obsidian](docs/advanced_usage.md).
+*   **NotebookLM Integration:** Explore a pre-loaded NotebookLM project with the core TDM documentation for interactive learning and experimentation: [NotebookLM Project Link](https://notebooklm.google.com/notebook/8ce8b157-d1b4-4c56-87c2-2452d95303de/audio)
 
 (This is where you can add more detailed documentation, linking to a wiki or a `/docs` folder for more complex topics).[2, 3, 4]
 
