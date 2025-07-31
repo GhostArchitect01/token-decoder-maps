@@ -1,8 +1,19 @@
 # Entity/Knowledge Tokens (`::EN-`)
 
-Entity/Knowledge tokens are the framework's primary tool for representing specific, well-defined pieces of information. They are designed to be flexible and can be adapted for a wide range of use cases, from abstract narrative concepts to concrete technical data.
+### `::EN-` (Entity/Knowledge Token)
 
-The token's purpose is defined by its `Type` and `Tags`. By varying these, you can steer the token's application. Below are several templates demonstrating this flexibility.
+**Purpose:** Denotes a token representing a specific entity, concept, or piece of knowledge (e.g., character, location, item, lore node). These define structured data elements within a knowledge base, allowing for the representation of both abstract narrative concepts and concrete technical data.
+
+**Types:** `Character`, `Location`, `Item`, `LoreNode`, `Faction`, `Myth`, `String`, `Number`, `URL`, `FilePath`, `DataStructure`, `Snippet`, `Fact`, `Concept`, `Definition`, `Person`, `Organization`
+
+**Examples:**
+- `::EN-ITEM-BLUE-PILL::`: Defines a narrative item with a summary and tags.
+- `::EN-API-ENDPOINT::`: Stores a technical configuration value like a URL.
+- `::EN-HTTP-STATUS-404::`: Provides a definition for a factual concept.
+
+---
+
+This file contains the canonical list of all `::EN-` tokens.
 
 ---
 
@@ -72,3 +83,26 @@ This template is for capturing any general-purpose information that doesn't fit 
 - **Tags:** #HTTP, #Web, #Reference
 - **Expanded Entry:** "The server cannot find the requested resource. In a browser, this means the URL is not recognized."
 ```
+
+## Additional Examples from `EN- token samples.md`
+
+::EN-META-LOG-SYSTEM::
+- ID: TDM-CONCEPT-001
+- Summary: A system for an AI to maintain a structured, reflective log of its own performance and interactions.
+- Purpose: To move beyond simple session history to a queryable database of performance data, enabling introspection and self-improvement.
+- Components: [::EN-META-LOG-ENTRY::, ::FX-FIRST-ORDER-REFLECTION::, ::FX-SECOND-ORDER-REFLECTION::, ::SY-UPDATE-META-LOG::]
+- Tags: [#TDM, #CoreConcept, #AgenticAI, #SelfReflection]
+
+::EN-USERSPACE-REFINEMENT::
+- ID: TDM-CONCEPT-002
+- Summary: The concept that the AI's self-improvement occurs at the "userspace" level (by proposing new or modified TDM tokens) rather than at the "kernel" level (by modifying its own source code).
+- Implication: This ensures that the AI's evolution is safe, transparent, and always subject to human review and approval.
+- Tags: [#TDM, #CoreConcept, #Safety, #HCI]
+
+
+::EN-TWO-STREAM-LOG-ARCHITECTURE::
+- ID: TDM-CONCEPT-003
+- Summary: An advanced architecture for the meta-log that separates objective event records from subjective reflections into two distinct files or "streams."
+- Benefit: Improves system performance and architectural cleanliness by separating immutable data from analytical commentary.
+- Streams: [Event Log (::ML-ACTION-RECORD::), Reflection Journal (::ML-FIRST-ORDER-REFLECTION::, ::ML-SECOND-ORDER-SYNTHESIS::)]
+- Tags: [#TDM, #Architecture, #Scalability]

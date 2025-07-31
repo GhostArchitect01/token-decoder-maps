@@ -85,6 +85,8 @@ This example assumes you have gemini-cli installed and authenticated.
 
 TDM is a Domain-Specific Language (DSL) designed for controlling AI agents. The core of the language is the token.
 
+For the canonical definition of all TDM token types and their structure, please refer to the [TDM Language Specification](docs/TDM_Language_Specification.md). For the unified architectural specification of the TDM framework, refer to the [TDM Unified Specification v3.0](docs/TDM_Unified_Specification_v3.0.md).
+
 ### Token Naming Convention
 
 All tokens follow a `::PREFIX-TOKEN-NAME::` structure to categorize their purpose.
@@ -95,35 +97,10 @@ All tokens follow a `::PREFIX-TOKEN-NAME::` structure to categorize their purpos
 | `::MX-` | Metrica | Defines data structures for the Metrica project ledger. |
 | `::SY-` | System/Utility | Manages the AI's operational state or interaction mode. |
 | `::EN-` | Entity/Knowledge | Represents a structured data element or concept. |
+| `::ML-` | Meta-Log | Represents a structured entry in the AI's performance log. |
+| `::ET-` | Ethos | Loads a complete ethical or moral calculus system. |
 
-### System & Utility Tokens (::SY-)
 
-These tokens manage the agent's state and core operations.
-
-*   `::SY-PROMPT-PRIMER::`: Initializes the agent to be decoder-aware.
-*   `::SY-TOGGLE-SYMBOLIC-MODE::`: Toggles a compressed, token-only response style.
-*   `::SY-TOGGLE-EXPANDED-MODE::`: Toggles a natural language response style that references active tokens.
-*   `::SY-METRICA-CREATE-TASK::`: Initiates the protocol to create a new task in `metrica.md`.
-*   `::SY-METRICA-UPDATE-TASK::`: Initiates the protocol to update an existing task.
-
-### Cognitive Function Tokens (::FX-)
-
-Use these tokens to load specific reasoning frameworks into the agent's context.
-
-Example:
-`> ::FX-ROOT-CAUSE-ANALYSIS:: Analyze the following error log:...`
-
-### Entity & Metrica Tokens (::EN-, ::MX-)
-
-These tokens represent structured data. `::EN-` tokens are for knowledge concepts, while `::MX-` tokens are for tasks. They follow a defined template for machine readability.
-
-Example `::EN-` Token:
-```
-::EN-CHARACTER-JANE::
-- Type: Fictional Character
-- Summary: A starship captain known for her tactical brilliance and unwavering loyalty to her crew.
-- Tags: #SciFi #Protagonist #StarshipCaptain
-```
 
 ## Advanced Usage & Concepts
 
@@ -135,7 +112,7 @@ For a detailed guide on integrating TDM with knowledge management tools like Obs
 
 ### The "Metrica" Task Management Protocol
 
-The Metrica system provides a robust, stateful task management solution by leveraging an external `metrica.md` file as a persistent ledger. This approach offers several key benefits:
+The Metrica system provides a robust, stateful task management solution by leveraging an external `metrica.md` file as a persistent ledger. It now supports a two-stream system to differentiate between high-level user goals and granular project sub-tasks. This approach offers several key benefits:
 
 *   **Persistent State:** Unlike typical LLM interactions that are stateless, Metrica tasks are written to a file, ensuring that task progress, details, and history are preserved across sessions.
 *   **Human-Readable and Machine-Parsable:** The `metrica.md` file uses a structured Markdown format that is easy for humans to read and for AI agents (or other tools) to parse and update programmatically.
