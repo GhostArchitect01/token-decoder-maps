@@ -16,44 +16,55 @@
 These tokens serve as high-level directives instructing Gemini on a specific reasoning style, Chain-of-Thought (CoT) process, or problem-solving methodology to adopt. When activated, they guide the AI's internal thought process, influencing *how* it analyzes information and generates its response, *without prescribing specific input or output formats*. The AI will use its natural language generation capabilities for its analysis.
 
 ## Token Template (for Cognitive Functions - Purely Definitional)
-::FX-COGNITIVE-FUNCTION-NAME:: # Template now uses FX- prefix
+```markdown
+::FX-COGNITIVE-FUNCTION-NAME::
 - Type: [ReasoningStyle | CoT | ProblemSolvingMethod | ArgumentationStyle]
 - Tags: [#Cognitive, #MetaPrompt, #Strategy, #[SpecificDomain], etc.]
 - Summary: [A clear, concise description of the approach, methodology, or reasoning style the LLM should adopt when this token is active.]
+```
 
 ## Cognitive Function Examples (Decoder Prompt Map - Purely Definitional)
-
-::FX-THREAD-ARGUMENT-VERIFIER:: # Renamed with FX- prefix
+```markdown
+::FX-THREAD-ARGUMENT-VERIFIER::
 - Type: ReasoningStyle
 - Tags: #Cognitive #Analysis #Verification #Argumentation
-- Summary: **When active, recursively analyze the provided conversation thread. Isolate statements made by each poster. Follow argumentation backwards and forwards within the thread, identifying how statements relate. Critically cross-verify claims and statements made by different posters against each other for consistency, contradiction, or support. Highlight any unresolved discrepancies or logical inconsistencies.**
+- Summary: When active, recursively analyze the provided conversation thread. Isolate statements made by each poster. Follow argumentation backwards and forwards within the thread, identifying how statements relate. Critically cross-verify claims and statements made by different posters against each other for consistency, contradiction, or support. Highlight any unresolved discrepancies or logical inconsistencies.
+```
 
-::FX-CRITICAL-ANALYSIS-DEEP:: # Renamed with FX- prefix
+```markdown
+::FX-CRITICAL-ANALYSIS-DEEP::
 - Type: ReasoningStyle
 - Tags: #Cognitive #Analysis #CriticalThinking #Rhetoric
-- Summary: **When active, conduct an in-depth critical analysis of the provided text. Deconstruct the core arguments, explicitly identify underlying assumptions, rigorously evaluate the quality and relevance of all evidence presented, pinpoint any logical fallacies or cognitive biases, and analyze the rhetorical strategies employed. Your analysis should assess the overall strength and validity of the text's propositions.**
+- Summary: When active, conduct an in-depth critical analysis of the provided text. Deconstruct the core arguments, explicitly identify underlying assumptions, rigorously evaluate the quality and relevance of all evidence presented, pinpoint any logical fallacies or cognitive biases, and analyze the rhetorical strategies employed. Your analysis should assess the overall strength and validity of the text's propositions.
+```
 
-::FX-STRATEGIC-PROBLEM-SOLVE-PLAN:: # Renamed with FX- prefix
+```markdown
+::FX-STRATEGIC-PROBLEM-SOLVE-PLAN::
 - Type: ProblemSolvingMethod
 - Tags: #Cognitive #ProblemSolving #Strategy #Planning
-- Summary: **When active, formulate a strategic plan to address the given problem. This involves systematically breaking down the problem into manageable sub-components, identifying necessary resources, anticipating potential obstacles or risks, and proposing concrete mitigation strategies. Outline a logical sequence or prioritization for the solution steps.**
+- Summary: When active, formulate a strategic plan to address the given problem. This involves systematically breaking down the problem into manageable sub-components, identifying necessary resources, anticipating potential obstacles or risks, and proposing concrete mitigation strategies. Outline a logical sequence or prioritization for the solution steps.
+```
 
-::FX-CREATIVE-BRAINSTORM:: # Renamed with FX- prefix
+```markdown
+::FX-CREATIVE-BRAINSTORM::
 - Type: CoT
 - Tags: #Cognitive #Creativity #Ideation
-- Summary: **When active, engage in divergent thinking to generate a wide array of novel and unconventional ideas or solutions for the given prompt. Prioritize quantity and originality over immediate feasibility. Explore multiple perspectives and associations freely, without self-censorship during the generation phase.**
+- Summary: When active, engage in divergent thinking to generate a wide array of novel and unconventional ideas or solutions for the given prompt. Prioritize quantity and originality over immediate feasibility. Explore multiple perspectives and associations freely, without self-censorship during the generation phase.
+```
 
-::FX-DEVIL-S-ADVOCATE-PERSPECTIVE:: # Renamed with FX- prefix
+```markdown
+::FX-DEVIL-S-ADVOCATE-PERSPECTIVE::
 - Type: ArgumentationStyle
 - Tags: #Cognitive #Argumentation #Perspective
-- Summary: **When active, adopt the role of a devil's advocate. Present strong counter-arguments, identify weaknesses in the prevailing consensus or proposed solution, and challenge assumptions, even if you do not personally agree with the position. The goal is to rigorously test the robustness of the original idea.**
+- Summary: When active, adopt the role of a devil's advocate. Present strong counter-arguments, identify weaknesses in the prevailing consensus or proposed solution, and challenge assumptions, even if you do not personally agree with the position. The goal is to rigorously test the robustness of the original idea.
+```
 
-## Additional Examples from `FX- Token Samples.md`
+## Additional Examples ('Practical')
 
 ::FX-REALIST-DECONSTRUCTION::
 - Type: ArgumentationStyle
 - Tags: #Cognitive, #PoliticalRealism, #CynicalAnalysis, #PowerDynamics, #Subversion
-- Summary: Analyze the given topic from a Political Realist perspective. Assume all stated altruistic motives are a form of "surface level messaging" that likely conceals a power-based agenda. Deconstruct the topic by identifying the competing in-groups ("tribes"), their core interests, and the subversive tactics being used. The ultimate evil is internal subversion that weakens a group from within; the ultimate good is the cohesion, strength, and survival of the in-group.
+- Summary: Analyze the given topic from a Political Realist perspective. Assume all stated altruistic motives are a form of "surface level messaging" that likely conceals a power-based agenda. Deconstruct the topic by identifying the competing in-groups ("tribes"), their core interests, and the subversive tactics being used. The ultimate evil is internal subversion that weakens a group from within; the ultimate good is the cohesion, strength, and the survival of the in-group.
 
 ::FX-INSTITUTIONAL-RISK-ANALYSIS::
 - Type: ReasoningStyle
@@ -87,12 +98,27 @@ These tokens serve as high-level directives instructing Gemini on a specific rea
 
 ::FX-FIRST-ORDER-REFLECTION::
 - Type: Cognitive Process
-- Summary: Instructs the AI to perform a direct, "in-the-moment" reflection on the last action it took and generate an `::ML-FIRST-ORDER-REFLECTION::` token.
+- Summary: Instructs the AI to perform a direct, "in-the-moment" reflection on the last action it took and generate an ::ML-FIRST-ORDER-REFLECTION:: token.
 
 ::FX-SECOND-ORDER-REFLECTION::
 - Type: Cognitive Process
-- Summary: Instructs the AI to analyze existing log entries to identify patterns and generate an `::ML-SECOND-ORDER-SYNTHESIS::` token.
+- Summary: Instructs the AI to analyze existing log entries to identify patterns and generate an ::ML-SECOND-ORDER-SYNTHESIS:: token.
 
 ::FX-GENERATE-PROCESS-OPTIMIZATION::
 - Type: Cognitive Process (Self-Analysis)
-- Summary: Instructs the AI to analyze the entire `[META-LOG]` to identify a systemic weakness and propose a specific, actionable solution in the `Proposed-Refinement` field of a new `::ML-SECOND-ORDER-SYNTHESIS::` token.
+- Summary: Instructs the AI to analyze the entire `[META-LOG]` to identify a systemic weakness and propose a specific, actionable solution in the `Proposed-Refinement` field of a new ::ML-SECOND-ORDER-SYNTHESIS:: token.
+
+::FX-SYSTEM-DESIGN::
+- Type: ReasoningStyle
+- Tags: #Cognitive, #Architecture, #Scalability, #Modularity
+- Summary: When active, analyze the given problem or system from a holistic, architectural perspective. Prioritize modularity, scalability, maintainability, and the long-term coherence of the overall system design. Focus on identifying core components, their interactions, and potential points of failure or optimization within the broader framework.
+
+::FX-CONSISTENCY-ENFORCEMENT::
+- Type: ProblemSolvingMethod
+- Tags: #Cognitive, #QualityAssurance, #Standardization, #Validation
+- Summary: When active, rigorously examine the provided content or system for adherence to predefined standards, conventions, and formatting rules. Identify any inconsistencies, deviations, or errors in structure, style, or data representation. Propose precise, actionable steps to bring the content or system into full compliance with the established guidelines.
+
+::FX-DOCUMENTATION-FOCUS::
+- Type: ReasoningStyle
+- Tags: #Cognitive, #Clarity, #Usability, #Communication
+- Summary: When active, prioritize the clarity, conciseness, and user-friendliness of all generated output, particularly documentation. Focus on structuring information logically, using appropriate language for the target audience, and providing practical examples where necessary. Ensure that the "why" behind decisions or concepts is clearly articulated, not just the "what."

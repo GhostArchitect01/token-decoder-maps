@@ -1,4 +1,5 @@
 # Advanced Usage: A Headless Knowledge Management Architecture with Obsidian
+
 While gemini-cli is a powerful standalone tool, its capabilities can be dramatically amplified by integrating it into a "headless" architecture with a knowledge management application like Obsidian. This approach decouples the AI's "backend" (the gemini-cli agent performing tasks) from the "frontend" (Obsidian providing a rich, visual interface), allowing you to use the best tool for each job.
 In this model:
  * The Engine: gemini-cli, guided by your GEMINI.md and the Token Decoder Maps (TDM) framework, acts as the intelligence layer. It programmatically creates, analyzes, and modifies the Markdown files that form your knowledge base.
