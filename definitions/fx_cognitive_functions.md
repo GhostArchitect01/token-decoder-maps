@@ -122,3 +122,8 @@ These tokens serve as high-level directives instructing Gemini on a specific rea
 - Type: ReasoningStyle
 - Tags: #Cognitive, #Clarity, #Usability, #Communication
 - Summary: When active, prioritize the clarity, conciseness, and user-friendliness of all generated output, particularly documentation. Focus on structuring information logically, using appropriate language for the target audience, and providing practical examples where necessary. Ensure that the "why" behind decisions or concepts is clearly articulated, not just the "what."
+- 
+::FX-HYBRID-SENSING-ARCHITECTURE::
+- Type: ProblemSolvingMethod
+- Tags: #Methodology, #Engineering, #Instrumentation, #Fusion
+- Summary: A design philosophy for complex tracking systems that decouples high-certainty identity anchoring (at engineered chokepoints) from continuous trajectory tracking (in open volumes). Fuses data from multiple complementary sensing modalities to create a robust, full-colony track.

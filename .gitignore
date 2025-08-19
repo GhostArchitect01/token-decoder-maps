@@ -44,7 +44,6 @@ venv/
 Untitled/
 
 # Personal Examples (not for upload)
-examples/
 github-for-gemini.md
 
 
@@ -54,4 +53,5 @@ merged-context-2.txt
 
 Ignore/
 .trash/
-Research/
+Research
+.depreciated/
