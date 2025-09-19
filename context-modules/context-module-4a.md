@@ -38,6 +38,10 @@ These tokens manage the AI's response style and interaction mode.
     * **Summary:** Extract and compress key symbolic tokens from a source text using the `::EN-TOKEN::` format.
     * **Tags:** #SymbolicParsing #Tokenization
 
+- ### ::SY-TERMINAL-AUTOMATION::
+	*   **Summary:** Activates a non-interactive, automated execution mode. When chained with another system token, it instructs the AI to execute the subsequent token's task directly and completely without asking for confirmation or providing conversational output. It should only return the final, specified OUTPUT of the chained token.
+	*   **Tags:** #sy/type/mode #automation
+
 ---
 
 #### **Metrica Protocol Tokens**
@@ -52,12 +56,12 @@ These tokens are used to interact with the centralized Metrica task ledger.
 
 * **::SY-METRICA-CREATE-TASK::**
     * **Type:** PromptProtocol
-    * **Summary:** Activates the protocol for creating a new task. I will prompt for details and append the new `::MX-USER-TASK-ID::` or `::MX-PROJECT-TASK-ID::` to the appropriate file within the central $METRICA directory.
+    * **Summary:** Activates the protocol for creating a new task. I will prompt for details, automatically generate a `#name/` slug from the title, use Obsidian wikilinks for the `Parent` field, and append the new `::MX-USER-TASK-ID::` or `::MX-PROJECT-TASK-ID::` to the appropriate file within the central $METRICA directory.
     * **Tags:** #Metrica #TaskManagement #System
 
 * **::SY-METRICA-UPDATE-TASK::**
     * **Type:** PromptProtocol
-    * **Summary:** Activates the protocol for updating an existing task. I will prompt for the task ID and details to update the corresponding entry in the appropriate file within the central $METRICA directory.
+    * **Summary:** Activates the protocol for updating an existing task. I will prompt for the task ID and details to update the corresponding entry in the appropriate file within the central $METRICA directory. If the `Title` is changed, the `#name/` slug will be regenerated.
     * **Tags:** #Metrica #TaskManagement #System
 
 * **::SY-METRICA-ACTIVE::**
@@ -74,15 +78,18 @@ These tokens are used to interact with the centralized Metrica task ledger.
 
 #### **Agentic Bridge & Automation Tokens**
 
-These tokens define the workflows for automated task ingestion.
+These tokens define the workflows for automated task ingestion. 
 
 * **::SY-SYNC-JOURNAL-ENTRY::**
     * **Type:** System Protocol
-    * **Summary:** Scans a single, specified journal entry file for tasks marked with the `¬` trigger and converts them into new `::MX-USER-TASK::` tokens in the master `metrica.md` file.
-    * **Argument:** `file_path` (The absolute path to the daily note to be processed).
+    * **Summary:** Scans a single, specified journal entry file for tasks marked
+with the `¬` trigger and converts them into new `::MX-USER-TASK::` tokens in the
+master `metrica.md` file.
+    * **Argument:** `file_path` (The absolute path to the daily note to be
+processed).
     * **Tags:** #Automation #Workflow #Metrica #Ingestion
 
-* **::SY-SCAN-AND-INGEST-TASKS::**
+* **::SY-SCAN-AND-INGEST-TASKS::** *[Not for use / Under development]*
     * **Type:** System Protocol
     * **Summary:** A comprehensive protocol to recursively scan specified directories, identify relevant items using a designated cognitive filter, and propose their creation as new Metrica User Tasks.
     * **Tags:** #Automation #Workflow #Metrica #Ingestion #Global
@@ -101,4 +108,15 @@ These tokens define the workflows for automated task ingestion.
         7.  Upon user approval, generate new `::MX-USER-TASK::` tokens and append them to the master `metrica.md` file.
         8.  Update the state log to mark the processed items as complete.
 
-
+### ::SY-NEWS-CALL::
+*   **Summary:** Read the source file and use the templates in this file to append the entry to the target, respecting category and any provided tags. This is an automated, non-interactive command; do not ask for confirmation before executing. Confirm success via OUTPUT.
+*   **Filepaths:**
+    *   **Source Directory:** `/storage/emulated/0/Documents/Laurel-catacomb/Resources/Links/Sources/`
+    *   **Target Directory:** `/storage/emulated/0/Documents/Laurel-catacomb/Resources/Links/`
+*   **Parameters:**
+    *   `source_file` (string, required): The filename of the article in the Source Directory.
+    *   `target_file` (string, required): The filename (.md) of the target file in the Target Directory (e.g., `target.md`)
+    *   `category` (string, required): The `## Category` header to file the entry under.
+    *   `tags` (string, optional): A comma-separated list of tags.
+*   **OUTPUT**: ADDED: title-of-source_file_article TO target_file
+*   **Tags:** `#sy/type/ingest

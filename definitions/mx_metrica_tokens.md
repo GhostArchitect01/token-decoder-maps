@@ -4,7 +4,7 @@
 
 **Purpose:** Denotes a token related to the Metrica project ledger. These primarily define data structures for task management, enabling a stateful and persistent task tracking system. Metrica tokens are divided into two distinct streams: high-level user goals and granular project tasks.
 
-**Types:** `UserTask`, `ProjectTask`
+
 
 **Examples:**
 - `::MX-USER-TASK-ID::`: Represents a high-level goal or personal task for the user, focusing on the "what."

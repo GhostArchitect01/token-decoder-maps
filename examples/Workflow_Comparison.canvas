@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"title","x":0,"y":-150,"width":500,"height":60,"type":"text","text":"# Workflow Comparison: Manual vs. TDM Automation"},
+		{"id":"manual_header","x":0,"y":0,"width":500,"height":60,"type":"text","text":"## Old Workflow: The Manual Process","color":"6"},
+		{"id":"manual_step1","x":0,"y":100,"width":300,"height":60,"type":"text","text":"1. Find and read article"},
+		{"id":"manual_step2","x":0,"y":200,"width":300,"height":80,"type":"text","text":"2. Copy/paste title, author, date, etc. into `News.md`"},
+		{"id":"manual_step3","x":0,"y":320,"width":300,"height":60,"type":"text","text":"3. Save article text to a new file in `Sources`"},
+		{"id":"manual_step4","x":0,"y":420,"width":300,"height":60,"type":"text","text":"4. Copy Obsidian URL of the new source file"},
+		{"id":"manual_step5","x":0,"y":520,"width":300,"height":60,"type":"text","text":"5. Paste Obsidian URL back into `News.md`"},
+		{"id":"automated_header","x":0,"y":650,"width":500,"height":60,"type":"text","text":"## New Workflow: TDM Automation","color":"4"},
+		{"id":"auto_step1","x":0,"y":750,"width":300,"height":60,"type":"text","text":"1. Save article text to a new file in `Sources`"},
+		{"id":"auto_step2","x":0,"y":850,"width":300,"height":100,"type":"text","text":"2. Run `news` command with file, target, category, & tags"},
+		{"id":"auto_step3","x":0,"y":990,"width":300,"height":120,"type":"text","text":"🤖 **Gemini Executes:**\n- Parses File\n- Formats Entry\n- Appends to Target\n- Creates Links"}
+	],
+	"edges":[
+		{"id":"edge1","fromNode":"manual_header","fromSide":"bottom","toNode":"manual_step1","toSide":"top","color":"6"},
+		{"id":"edge2","fromNode":"manual_step1","fromSide":"bottom","toNode":"manual_step2","toSide":"top","color":"6"},
+		{"id":"edge3","fromNode":"manual_step2","fromSide":"bottom","toNode":"manual_step3","toSide":"top","color":"6"},
+		{"id":"edge4","fromNode":"manual_step3","fromSide":"bottom","toNode":"manual_step4","toSide":"top","color":"6"},
+		{"id":"edge5","fromNode":"manual_step4","fromSide":"bottom","toNode":"manual_step5","toSide":"top","color":"6"},
+		{"id":"edge6","fromNode":"automated_header","fromSide":"bottom","toNode":"auto_step1","toSide":"top","color":"4"},
+		{"id":"edge7","fromNode":"auto_step1","fromSide":"bottom","toNode":"auto_step2","toSide":"top","color":"4"},
+		{"id":"edge8","fromNode":"auto_step2","fromSide":"bottom","toNode":"auto_step3","toSide":"top","color":"4"}
+	]
+}

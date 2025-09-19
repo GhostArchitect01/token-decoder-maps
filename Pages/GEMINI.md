@@ -1,0 +1,1 @@
+This directory is to serve as a Github Pages blog using markdown files. 
