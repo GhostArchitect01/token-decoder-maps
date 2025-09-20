@@ -28,28 +28,40 @@ Tags: #Type/system/protocol
 
 ## Metrica Protocol Tokens
 
-These tokens are used to interact with the Metrica task ledger.
+These tokens are used to interact with the two-stream Metrica task management system.
 
-::SY-READ-METRICA::
-- Summary: Loads the master `metrica.md` file from the central $METRICA directory into the current context.
-- $METRICA = @Metrica/
-- Tags: #Type/metrica
+*   **`::SY-READ-METRICA::`**
+    *   **Summary:** Loads the complete state of the Metrica system into context by reading all task files from their respective directories. This is used for passive review or to prepare for other operations.
+    *   **Workflow:**
+        1.  Scans the `$METRICA/MX-USER/` directory and reads all `MX-USER-TASK-ID.md` files.
+        2.  Scans the `$METRICA/MX-PROJECT/` directory and reads all `MX-PROJECT-ID.md` files.
+    *   **Tags:** #Type/SystemProtocol #Type/Metrica #DataAccess
 
-::SY-METRICA-CREATE-TASK::
-- Summary: Activates the protocol for creating a new task. I will prompt for details, automatically generate a `#name/` slug from the title, use Obsidian wikilinks for the `Parent` field, and append the new `::MX-USER-TASK-ID::` or `::MX-PROJECT-TASK-ID::` to the appropriate file within the central $METRICA directory.
-- Tags: #Type/metrica
+*   **`::SY-METRICA-CREATE-TASK::`**
+    *   **Summary:** Activates an interactive protocol to create a new Metrica task, correctly handling the two-stream (User/Project) system.
+    *   **Workflow:**
+        1.  Prompts the user to specify the task type: "User Task" or "Project Task".
+        2.  If "User Task", it gathers details and creates a new `MX-USER-TASK-<ID>.md` file in the `$METRICA/MX-USER/` directory.
+        3.  If "Project Task", it prompts for the parent User Task ID, gathers details, and appends the new `::MX-PROJECT-TASK-ID::` to the correct `MX-PROJECT-<ID>.md` file in the `$METRICA/MX-PROJECT/` directory.
+    *   **Tags:** #Type/SystemProtocol #Type/Metrica #Interactive
 
-::SY-METRICA-UPDATE-TASK::
-- Summary: Activates the protocol for updating an existing task. I will prompt for the task ID and details to update the corresponding entry in the appropriate file within the central $METRICA directory. If the `Title` is changed, the `#name/` slug will be regenerated.
-- Tags: #Type/metrica
+*   **`::SY-METRICA-UPDATE-TASK::`**
+    *   **Summary:** Activates an interactive protocol to update an existing Metrica task.
+    *   **Workflow:**
+        1.  Prompts the user for the full `::MX-...::` Task ID to be updated.
+        2.  Determines the task type (User or Project) from the ID format.
+        3.  Locates the appropriate task file within the `$METRICA/MX-USER/` or `$METRICA/MX-PROJECT/` directory and applies the requested updates.
+    *   **Tags:** #Type/SystemProtocol #Type/Metrica #Interactive
 
-::SY-METRICA-ACTIVE::
-- Summary: Enables semi-autonomous processing of Metrica tasks. I will proactively identify and propose actions based on the global state of all tasks within the central Metrica directory. I will NOT execute these actions without explicit user confirmation.
-- Tags: #Type/metrica/mode #type/system/metrica
+*   **`::SY-METRICA-ACTIVE::`**
+    *   **Summary:** A behavioral mode that enables semi-autonomous, proactive analysis of Metrica tasks that are currently loaded in the context.
+    *   **Note:** This mode does not load data itself. `::SY-READ-METRICA::` should be used first to ensure the context is up-to-date.
+    *   **Tags:** #Type/SystemMode #Type/Metrica
 
-::SY-METRICA-SYSTEM::
-- Summary: When activated, this token will first load all trackers from the central Metrica directory and then enable the `::SY-METRICA-ACTIVE::` mode for global, cross-project analysis.
-- Tags: #Type/metrica/mode #type/system/metrica
+*   **`::SY-METRICA-SYSTEM::`**
+    *   **Summary:** A convenience protocol that prepares and activates a full Metrica work session.
+    *   **Workflow:** This token is a chained execution of `::SY-READ-METRICA::` to load all tasks, immediately followed by the activation of the `::SY-METRICA-ACTIVE::` mode.
+    *   **Tags:** #Type/SystemProtocol #Type/Metrica #Workflow
 
 ## Experimental Metrica Protocols
 

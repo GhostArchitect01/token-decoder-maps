@@ -53,3 +53,15 @@ Project tokens are named by appending an alphabetical suffix to their parent use
 2.  That goal is then broken down into one or more `::MX-PROJECT-TASK-ID::`s.
 3.  Each project task links back to the main user task via the `Parent` field.
 4.  This creates a clear, auditable trail from the high-level objective down to the individual implementation steps.
+
+---
+
+## Deprecating Tasks
+
+To maintain a clean working environment, completed or defunct tasks can be deprecated. The process is as follows:
+
+1.  A central `.archive/` directory must exist in the root of the `$METRICA` project.
+2.  To deprecate a User Task, its `MX-USER-TASK-<ID>.md` file is moved from the `MX-USER/` directory into the `.archive/` directory.
+3.  The corresponding `MX-PROJECT-<ID>.md` file, which contains all of its child project tasks, should also be moved from the `MX-PROJECT/` directory into the `.archive/` directory.
+
+This ensures that the history of all tasks is preserved in a single, consistent location.
