@@ -1,0 +1,13 @@
+::SY-NORMALIZE-ENUMS::
+- **Type:** System/Utility
+- **Summary:** Enforce canonical names and enums across EN tokens.
+- **Tags:** #sy/type/utility #Normalization #DataCleaning
+- **Parameters:**
+    - `tokens` (list, required): EN tokens from a previous step.
+    - `canon` (object, optional): override table for names/aliases.
+- **Behavior:**
+    - Map all Type values to {System, Origin, Archetype, Questline, Companion, Faction, Skill, Mechanic}.
+    - Normalize tags to #Game/RogueTrader plus #Category/ plus #System/.
+    - Fix spacing and common typos (e.g., "Jae Heyd ari" -> "Jae Heydari").
+- **Output:** normalized_tokens
+- **Notes:** Do not add new fields here; only normalize. Inputs are trusted to be already extracted. Uses Module 3 directive for external token libraries if provided.

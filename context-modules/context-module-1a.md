@@ -14,6 +14,8 @@ All protocols and tokens should reference these variables.
 
 `$LIBRARY` = `~/storage/shared/Documents/Tdm-library`
 
+`$TAGONTOLOGY = ~/storage/shared/Documents/tdm-library/tag_ontology.md`
+
 ---
 
 #### **1. Core Philosophy: From Prompting to Context Engineering**
@@ -105,3 +107,9 @@ Project tokens are named by appending an alphabetical suffix to their parent use
 2.  That goal is then broken down into one or more `::MX-PROJECT-TASK-ID::`s.
 3.  Each project task links back to the main user task via the `Parent` field.
 4.  This creates a clear, auditable trail from the high-level objective down to the individual implementation steps.
+
+---
+
+#### **4. Tag Ontology**
+
+Always refer to $TAGONTOLOGY when creating or modifying ::PREFIX-TOKENS:: or their tags. 

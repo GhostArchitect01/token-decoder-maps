@@ -1,0 +1,15 @@
+::SY-VERSION-ANNOTATOR::
+- **Type:** System/Utility
+- **Summary:** Add version and DLC metadata to EN tokens.
+- **Tags:** #sy/type/utility #Versioning #Metadata
+- **Parameters:**
+    - `tokens` (list, required)
+    - `game_version` (string, required)
+    - `dlc_required` (string, default: none)
+    - `patch_first_valid` (string, optional)
+    - `patch_last_verified` (string, optional)
+    - `source_primary` (string, optional) # canonical URL to Owlcat patch/DLC post when known
+- **Behavior:**
+    - Append fields: game_version, dlc_required, patch_first_valid, patch_last_verified, last_verified_utc=now().
+    - Ensure each token retains Source and Full_Details_Page per your extractor’s requirement.
+- **Output:** versioned_tokens

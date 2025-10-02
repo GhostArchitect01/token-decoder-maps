@@ -93,3 +93,74 @@ Project tokens are named by appending an alphabetical suffix to their parent use
 2.  That goal is then broken down into one or more `::MX-PROJECT-TASK-ID::`s.
 3.  Each project task links back to the main user task via the `Parent` field.
 4.  This creates a clear, auditable trail from the high-level objective down to the individual implementation steps.
+
+---
+
+# The TDM Tag Ontology
+
+**Core Principles**  
+The ontology is a namespaced, hierarchical system. The top-level tag namespace aligns with the token prefix it describes MX- tokens. It uses a `#domain/category/value` structure and is intended to be stored in a single, canonical tag_ontology.md file ($TAGONTOLOGY) for the AI to reference on demand.
+
+[#mx/](http://localhost/#mx/) (Metrica Tokens)
+
+- [#mx/status/](http://localhost/#mx/status/)
+    - pending
+    - done
+    - started
+    - obsolete
+- [#mx/type/](http://localhost/#mx/type/)
+    - user
+    - project
+    - agent
+- [#mx/category/](http://localhost/#mx/category/)
+    - build
+    - design
+    - system
+    - debug
+    - refactor  
+        [#fx/](http://localhost/#fx/) (Function/Cognitive Tokens)
+- [#fx/type/](http://localhost/#fx/type/)
+    - review
+    - debug
+    - expert
+    - cot (Chain of Thought)
+    - verify
+    - oppose
+    - design
+- [#fx/category/](http://localhost/#fx/category/)
+    - protocol
+    - analysis
+    - dev
+    - persona  
+        [#sy/](http://localhost/#sy/) (System/Utility Tokens)
+- [#sy/type/](http://localhost/#sy/type/)
+    - protocol
+    - utility
+    - mode
+- [#sy/category/](http://localhost/#sy/category/)
+    - metrica
+    - data
+    - web
+    - file-io
+    - runtime
+    - ingestion  
+        [#en/](http://localhost/#en/) (Entity/Knowledge Tokens)
+- [#en/type/](http://localhost/#en/type/)
+    - Game/Writing: character, item, world, setting, system, planet, mechanic, class, background, origin, ability
+    - Information: index, guide, fact
+    - System: rs, ml, legendarium
+- [#en/category/](http://localhost/#en/category/)
+    - log
+    - game
+    - writing
+    - info
+    - glyph
+
+Relational & Global Tags
+
+- #*/protocol/
+    - Links a component token FX- or ::SY- to the high-level protocol it serves (e.g., `#sy/protocol/daily-dispatcher)`.
+- [#en/project/](http://localhost/#en/project/)
+    - Links an entity token to the specific project it belongs to (e.g., `#en/project/tdm-game-guide`). This can be extended for project-specific sub-categories like #`en/project/tdm-game-guide/log`.
+- [#tech/](http://localhost/#tech/)
+    - A top-level, global tag for specific, reusable technologies (e.g., `#tech/python`, `#tech/obsidian`).

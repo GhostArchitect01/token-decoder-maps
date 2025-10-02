@@ -1,0 +1,11 @@
+::SY-WRITE-TOKENS::
+- **Type:** System/Utility
+- **Summary:** Write tokens to disk with stable naming and idempotent updates.
+- **Tags:** #sy/type/utility #FileIO #TokenManagement
+- **Parameters:**
+    - `tokens` (list, required)
+    - `out_dir` (string, default: /storage/emulated/0/Documents/Laurel-catacomb/resources/links/notebooks/rogue-trader/en-token-guide/)
+- **Behavior:**
+    - Filename: EN-[TYPE]-[SLUG].md (SLUG = lowercase, hyphenated Name/Title).
+    - If file exists, replace content between markers: ... 
+    - Return a summary: CREATED n, UPDATED m.
