@@ -1,7 +1,7 @@
 ::SY-CROSSREF-LINKER::
 - **Type:** System/Utility
 - **Summary:** Backfill cross-entity links and indexes.
-- **Tags:** #sy/type/utility #CrossReferencing #Linking
+Tags: #sy/type/utility, #sy/category/data
 - **Parameters:**
     - `tokens` (list, required)
 - **Behavior:**

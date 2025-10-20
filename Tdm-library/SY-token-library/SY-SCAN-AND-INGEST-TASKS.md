@@ -1,6 +1,6 @@
 ::SY-SCAN-AND-INGEST-TASKS::
 - Summary: A comprehensive protocol to recursively scan specified directories, identify relevant items using a designated cognitive filter, and propose their creation as new Metrica User Tasks.
-- Tags: #Type/SystemProtocol, #Automation, #Workflow, #Metrica, #Ingestion, #Global
+- Tags: #sy/type/protocol, #sy/category/metrica, #sy/category/ingestion
 - Parameters:
   - **scope:** [ "local" | "global" ] - Determines the scanning range. "local" scans the current directory only. "global" scans a predefined list of directories.
   - **relevance_fx:** [ ::FX-TOKEN-NAME:: ] - A mandatory parameter that points to a cognitive token containing the logic for identifying relevant items.

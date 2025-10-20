@@ -1,7 +1,7 @@
 ::SY-VALIDATE-AND-QUARANTINE::
 - **Type:** System/Utility
 - **Summary:** Performs integrity checks on a list of ::EN- tokens against a centralized schema. Valid tokens are passed to the next step; invalid tokens are moved to a quarantine directory for manual review.
-- **Tags:** #sy/type/utility #Validation #DataIntegrity #Quarantine
+- **Tags:** #sy/type/utility, #sy/category/data, #sy/category/file-io
 - **Parameters:**
     - `tokens` (list, required): A list of ::EN- tokens to validate.
     - `schema_path` (string, required): The absolute path to the master schema file (e.g., `/storage/emulated/0/Documents/Laurel-catacomb/Resources/Links/notebooks/gemini.md`).

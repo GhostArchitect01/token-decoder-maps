@@ -1,7 +1,7 @@
 ::SY-EXTRACT-TO-DRAFT-TOKENS::
 - **Type:** System/Utility
 - **Summary:** Extracts raw gameplay information from source content into draft ::EN-* tokens, filling Source and Full_Details_Page, adhering to schemas defined in `/storage/emulated/0/Documents/Laurel-catacomb/Resources/Links/notebooks/gemini.md`. Each token includes an `overall_confidence` score and a `review_needed` flag based on extraction quality.
-- **Tags:** #sy/type/utility #Extraction #DraftTokens #ConfidenceScore
+Tags: #sy/type/protocol, #sy/category/data, #sy/category/ingestion
 - **Parameters:**
     - `source_content` (string, required): The raw content (HTML, Markdown, text) from which to extract information.
     - `game_title` (string, optional): The title of the game, to be used for context and token naming.

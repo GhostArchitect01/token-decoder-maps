@@ -1,0 +1,14 @@
+::MX-USER-TASK-010::
+- **Title:** Restructure Project File System
+- **Dependencies:** 
+- **Children:** 
+- **Created:** 2025-09-18
+- **Updated:** 2025-10-01
+- **Tags:** #mx/user/status/done, #mx/category/refactor
+- **Notes:** Analyze and refactor the overall file structure of the token-decoder-framework-github project for better organization and clarity.
+	- [x] TDM Library established
+	- [x] TDM Library is replicated in TDM archive and user environment
+	- [x] Recreate SY- token definition document in the style of the existing definition documents
+	- [x] Migrate FX tokens out of definitions document and into $library
+		- [x] retain the document (ie: just migrate tokens but do not delete the other contents of the file)
+	- [x] use shell command to copy missing files from $library to the cloned folder in token-decoder-framework-github/

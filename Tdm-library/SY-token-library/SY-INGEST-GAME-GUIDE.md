@@ -1,7 +1,7 @@
 ::SY-INGEST-GAME-GUIDE::
 - **Type:** System/Protocol
 - **Summary:** Automates the end-to-end ingestion and processing of game guide content into structured ::EN- tokens, applying a full pipeline of extraction, validation, normalization, versioning, quest graphing, cross-linking, and writing to disk.
-- **Tags:** #sy/type/protocol #Automation #GameGuideIngestion #Pipeline
+Tags: #sy/type/protocol, #sy/category/ingestion, #sy/category/data
 - **Parameters:**
     - `target_path` (string, required): The absolute path to a single file or a directory containing game guide content (e.g., Markdown, text files). If a directory, it will recursively process all `.md` and `.txt` files.
     - `game_title` (string, optional): The title of the game for contextual token naming and tagging. Defaults to "Unknown Game".

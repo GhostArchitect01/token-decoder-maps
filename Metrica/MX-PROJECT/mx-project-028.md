@@ -1,0 +1,44 @@
+::MX-PROJECT-TASK-028A::
+- **Title:** Install and configure a web UI for llama.cpp
+- **Parent:** [[MX-USER-TASK-028]]
+- **Framework:** Shell
+- **Dependencies:**
+- **Created:** 2025-10-09
+- **Updated:** 2025-10-09
+- **Tags:** [#mx/project/status/failed, #mx/category/system, #tech/webui]
+- **Acceptance Criteria:**
+  - [ ] Install a web UI - FAILED
+  - [ ] Configure the web UI to connect to the `llama.cpp` server
+- **Notes:** The chosen web UI is LibreWebUI.
+- **Notes:** The installation is currently blocked by a build error with the `sqlite3` native dependency. The installation failed due to a persistent build error with the `@journeyapps/sqlcipher` native dependency. This issue is specific to the Termux environment and requires expert intervention from the LibreWebUI or Termux community.
+---
+::MX-PROJECT-TASK-028B::
+- **Title:** Review LibreWebUI backend code to identify and analyze encryption-related logic
+- **Parent:** [[MX-USER-TASK-028]]
+- **Framework:** Shell
+- **Dependencies:** [[MX-PROJECT-TASK-028A]]
+- **Created:** 2025-10-09
+- **Updated:** 2025-10-09
+- **Tags:** [#mx/project/status/pending, #mx/category/review, #tech/webui]
+- **Acceptance Criteria:**
+  - [x] Identify all files that use the `bcrypt` package
+  - [x] Identify all files that use the `jsonwebtoken` package
+  - [x] Identify all files that use the `@journeyapps/sqlcipher` package
+  - [x] Document the purpose of the encryption-related code
+- **Notes:**
+---
+::MX-PROJECT-TASK-028C::
+- **Title:** Refactor LibreWebUI backend to remove encryption and replace it with Termux-compatible alternatives
+- **Parent:** [[MX-USER-TASK-028]]
+- **Framework:** Shell
+- **Dependencies:** [[MX-PROJECT-TASK-028B]]
+- **Created:** 2025-10-09
+- **Updated:** 2025-10-09
+- **Tags:** [#mx/project/status/pending, #mx/category/refactor, #tech/webui]
+- **Acceptance Criteria:**
+  - [ ] Remove the `bcrypt` package from the `package.json` file
+  - [ ] Remove the `jsonwebtoken` package from the `package.json` file
+  - [ ] Remove the `@journeyapps/sqlcipher` package from the `package.json` file and replace it with `sqlite3`
+  - [ ] Replace the encryption-related code with standard, Termux-compatible alternatives
+  - [ ] The modified application should install and run without errors
+- **Notes:**

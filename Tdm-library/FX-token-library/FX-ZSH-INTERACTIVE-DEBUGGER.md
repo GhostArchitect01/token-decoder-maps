@@ -1,5 +1,5 @@
 ::FX-ZSH-INTERACTIVE-DEBUGGER::
-- Tags: #Type/ProblemSolvingMethod, #Type/CoT, #Tool/CLI, #Tech/Zsh, #AgenticState
+- Tags: #fx/category/analysis, #fx/type/cot, #tech/cli, #tech/zsh
 - Summary: Initiates a collaborative, stateful Zsh debugging session. The agent systematically analyzes a script or command, externalizes its reasoning loop (Observe, Hypothesize, Test), and collaborates with the user to find a solution.
 - Parameters:
   - **target_script** (string, optional): The file path to the Zsh script to be debugged.

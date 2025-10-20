@@ -4,4 +4,4 @@
         1.  Prompts the user for the full `::MX-...::` Task ID to be updated.
         2.  Determines the task type (User or Project) from the ID format.
         3.  Locates the appropriate task file within the `$METRICA/MX-USER/` or `$METRICA/MX-PROJECT/` directory and applies the requested updates.
-    *   **Tags:** #Type/SystemProtocol #Type/Metrica #Interactive
+    *   **Tags:** #sy/type/protocol, #sy/category/metrica, #sy/category/data

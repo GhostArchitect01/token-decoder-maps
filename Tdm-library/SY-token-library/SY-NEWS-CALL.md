@@ -9,4 +9,4 @@
     *   `category` (string, required): The `## Category` header to file the entry under.
     *   `tags` (string, optional): A comma-separated list of tags.
 *   **OUTPUT**: ADDED: title-of-source_file_article TO target_file
-*   **Tags:** `#sy/type/ingest
+Tags: #sy/type/protocol, #sy/category/ingestion, #sy/category/file

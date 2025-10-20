@@ -1,5 +1,9 @@
 # Changelog [YYYY-MM-DD]
 
+## [2025-10-20] - Author
+
+- Re-added `context-module-4a` to the script after I had removed it because zero short term memory 
+
 ## [2025-10-06] - Gemini
 
 - **Refactor(merge_modules.sh):** Moved target file definitions to the top of the script for easier configuration.

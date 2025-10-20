@@ -1,7 +1,7 @@
 ::SY-WEB-CRAWL::
 - **Type:** System/Protocol
 - **Summary:** Orchestrates the fetching of web content from a starting URL, recursively extracting and following links up to a specified depth or page limit, and returning a collection of raw HTML content.
-- **Tags:** #sy/type/protocol #WebCrawling #ContentAcquisition #Automation
+- **Tags:** #sy/type/protocol, #sy/category/web, #sy/category/ingestion
 - **Parameters:**
     - `start_url` (string, required): The initial URL to begin crawling.
     - `depth` (integer, optional, default: 1): The maximum depth to follow links from the `start_url`. A depth of 1 means only the `start_url` and pages directly linked from it will be fetched.

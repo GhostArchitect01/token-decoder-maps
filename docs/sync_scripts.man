@@ -1,0 +1,47 @@
+SYNC_SCRIPTS(1)             General Commands Manual            SYNC_SCRIPTS(1)
+
+NAME
+     sync_tdm_library.sh, sync_metrica_tasks.sh - TDM project synchronization scripts
+
+SYNOPSIS
+     sync_tdm_library.sh
+     sync_metrica_tasks.sh
+
+DESCRIPTION
+     These scripts are used to synchronize assets from the canonical TDM
+     environment into the local project directory for the TDM Framework. They
+     use rsync(1) to perform an efficient one-way synchronization.
+
+   sync_tdm_library.sh
+     Synchronizes the canonical TDM library, including all EN, FX, and SY
+     tokens, to the project's local ./Tdm-library/ directory.
+
+     The source directory is:
+           /storage/emulated/0/Documents/Laurel-catacomb/Tdm-library/
+
+     The destination directory is:
+           ./Tdm-library/
+
+   sync_metrica_tasks.sh
+     Synchronizes the canonical Metrica user tasks (MX-USER) and project
+     tasks (MX-PROJECT) to the project's local ./Metrica/ directory. It
+     will create the destination directory if it does not exist.
+
+     The source directories are:
+           /storage/emulated/0/Documents/Laurel-catacomb/Metrica/MX-USER/
+           /storage/emulated/0/Documents/Laurel-catacomb/Metrica/MX-PROJECT/
+
+     The destination directories are:
+           ./Metrica/MX-USER/
+           ./Metrica/MX-PROJECT/
+
+OPTIONS
+     These scripts do not take any command-line options. Configuration is
+     handled by variables inside the scripts.
+
+FILES
+     utils/sync_tdm_library.sh
+     utils/sync_metrica_tasks.sh
+
+SEE ALSO
+     rsync(1)

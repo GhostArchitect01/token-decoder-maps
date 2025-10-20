@@ -1,7 +1,7 @@
 ::SY-NORMALIZE-ENUMS::
 - **Type:** System/Utility
 - **Summary:** Enforce canonical names and enums across EN tokens.
-- **Tags:** #sy/type/utility #Normalization #DataCleaning
+- **Tags:** #sy/type/utility, #sy/category/data
 - **Parameters:**
     - `tokens` (list, required): EN tokens from a previous step.
     - `canon` (object, optional): override table for names/aliases.

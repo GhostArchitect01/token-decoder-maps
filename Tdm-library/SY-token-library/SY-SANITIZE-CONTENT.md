@@ -1,7 +1,7 @@
 ::SY-SANITIZE-CONTENT::
 - **Type:** System/Utility
 - **Summary:** Converts raw HTML content into a clean, linguistic-friendly format (e.g., Markdown or plain text), removing boilerplate, scripts, styles, and navigation elements.
-- **Tags:** #sy/type/utility #ContentSanitization #HTMLtoMarkdown #TextCleaning
+- **Tags:** #sy/type/utility, #sy/category/data, #sy/category/web
 - **Parameters:**
     - `raw_html_content` (string, required): The raw HTML content to sanitize.
     - `output_format` (string, optional, default: "markdown"): The desired output format ("markdown" or "text").

@@ -1,0 +1,11 @@
+::MX-USER-TASK-014::
+- **Title:** Create Context Module Merging Script
+- **Dependencies:** 
+- **Children:** [[metrica.md#::MX-PROJECT-TASK-014A::]], [[metrica.md#::MX-PROJECT-TASK-014B::]], [[metrica.md#::MX-PROJECT-TASK-014C::]], [[metrica.md#::MX-PROJECT-TASK-014D::]], [[metrica.md#::MX-PROJECT-TASK-014E::]]
+- **Created:** 2025-09-18
+- **Updated:** 2025-09-18
+- **Tags:** #mx/user/status/done, #mx/category/build
+- **Notes:** Develop a script to automate the merging of TDM context modules. The script should accept a list of module identifiers (e.g., 1A, 2B, 3), copy the corresponding files from the source directory (e.g., Obsidian vault), merge them into a single file, and place it in the target Gemini context directory. This will streamline the process of updating the agent's context.
+- **Task Completed:** Gemini was able to successfully 1 shot the script and follow the MX-PROJECT tasks. It logged it's progress as requested. 
+- script updated
+- final (current) version now in `utils/`

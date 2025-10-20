@@ -1,0 +1,13 @@
+::MX-USER-TASK-024::
+- **Title:** Research and Compile BeaverAI Model Series Descriptions
+- **Dependencies:** 
+- **Children:** 
+- **Created:** 2025-10-01
+- **Updated:** 2025-10-01
+- **Tags:** #Type/UserTask, #Category/Research, #Project/BeaverAI, #metrica/status/pending, #metrica/priority/High
+- **Notes:** 
+	- [ ] Find all different model series by BeaverAI.
+	- [ ] Find the descriptions in the available model cards.
+	- [ ] Reconcile any differences between model card descriptions for the same series, prioritizing the newest available model card.
+	- [ ] Compile this into a single list.
+	- [ ] Goal: Provide a canonical list to the BeaverAI team to clarify model purposes.

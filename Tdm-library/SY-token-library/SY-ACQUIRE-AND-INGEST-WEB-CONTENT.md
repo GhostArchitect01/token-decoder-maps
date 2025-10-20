@@ -1,7 +1,7 @@
 ::SY-ACQUIRE-AND-INGEST-WEB-CONTENT::
 - **Type:** System/Protocol
 - **Summary:** Orchestrates the end-to-end process of acquiring and sanitizing web-based game guide content. It performs a web search, crawls relevant pages, sanitizes the content, and returns a structured output of cleaned content ready for linguistic review or subsequent tokenization.
-- **Tags:** #sy/type/protocol #WebAcquisition #ContentPreparation #Automation
+Tags: #sy/type/protocol, #sy/category/web, #sy/category/ingestion
 - **Parameters:**
     - `search_query` (string, required): The initial search term, subject, or category to find relevant web pages (e.g., "Warhammer 40k Rogue Trader builds").
     - `crawl_depth` (integer, optional, default: 1): The maximum depth to follow links during the web crawl. A depth of 1 means only the starting URL and pages directly linked from it will be fetched.

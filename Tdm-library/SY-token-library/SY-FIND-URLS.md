@@ -4,4 +4,4 @@
     1.  Receives a `topic` (URL or string) as a parameter.
     2.  Executes the following chain: `::FX-EXTRACT-SEARCH-TERMS:: | ::FX-FIND-ALTERNATIVE-URLS::`
     3.  Outputs a list of found URLs.
-- **Tags:** #System  #Protocol  #Research
+Tags: #sy/type/protocol, #sy/category/web, #sy/category/data

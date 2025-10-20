@@ -3,4 +3,4 @@
     *   **Workflow:**
         1.  Scans the `$METRICA/MX-USER/` directory and reads all `MX-USER-TASK-ID.md` files.
         2.  Scans the `$METRICA/MX-PROJECT/` directory and reads all `MX-PROJECT-ID.md` files.
-    *   **Tags:** #Type/SystemProtocol #Type/Metrica #DataAccess
+    *   **Tags:** #sy/type/protocol, #sy/category/metrica, #sy/category/file-io

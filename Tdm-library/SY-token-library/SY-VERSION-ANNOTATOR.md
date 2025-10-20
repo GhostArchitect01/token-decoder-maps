@@ -1,7 +1,7 @@
 ::SY-VERSION-ANNOTATOR::
 - **Type:** System/Utility
 - **Summary:** Add version and DLC metadata to EN tokens.
-- **Tags:** #sy/type/utility #Versioning #Metadata
+- **Tags:** #sy/type/utility, #sy/category/data
 - **Parameters:**
     - `tokens` (list, required)
     - `game_version` (string, required)

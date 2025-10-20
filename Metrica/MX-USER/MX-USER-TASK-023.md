@@ -1,0 +1,14 @@
+::MX-USER-TASK-023::  
+- **Title:** Add Parameterized Filtering to Metrica System Tokens
+- **Framework:** TDM
+- **Dependencies:** 
+- **Children:** 
+- **Created:** 2025-09-19
+- **Updated:** 2025-09-24
+- **Tags:** #Type/UserTask, #Category/TDM-Framework, #Category/Feature, #metrica/status/pending, #metrica/priority/medium
+- **Acceptance Criteria:** 
+    - [ ] The `::SY-READ-METRICA::` token can accept parameters (e.g., `tags`, `title`).
+    - [ ] When parameterized, the token loads a filtered subset of Metrica tasks into context.
+    - [ ] The implementation uses an efficient search tool like `search_file_content`.
+- **Notes:** This task is to implement the feature proposed by the user to allow for more intelligent and efficient loading of Metrica tasks. It will enable workflows like `::SY-READ-METRICA::(tags="#metrica/status/pending")`.
+- **Notes:** maybe advantageous to implement alongside an mCP server 

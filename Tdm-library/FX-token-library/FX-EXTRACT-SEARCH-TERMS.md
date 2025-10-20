@@ -6,4 +6,4 @@
     3.  Analyze the text to identify the core topic and key entities.
     4.  Formulate 2-3 precise search queries.
 - **Output:** A list of search query strings.
-- **Tags:** #Cognitive  #NLP  #Search
+- **Tags:** #Cognitive, #NLP, #Search

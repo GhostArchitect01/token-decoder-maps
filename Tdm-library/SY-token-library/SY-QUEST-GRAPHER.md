@@ -1,7 +1,7 @@
 ::SY-QUEST-GRAPHER::
 - **Type:** System/Utility
 - **Summary:** Convert quest prose into machine-usable graphs.
-- **Tags:** #sy/type/utility #QuestGraphing #NarrativeAnalysis
+- **Tags:** #sy/type/utility, #sy/category/data, #en/category/game
 - **Parameters:**
     - `tokens` (list, required) # expect Type: Questline
 - **Behavior:**

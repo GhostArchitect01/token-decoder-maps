@@ -1,7 +1,7 @@
 ::SY-WRITE-TOKENS::
 - **Type:** System/Utility
 - **Summary:** Write tokens to disk with stable naming and idempotent updates.
-- **Tags:** #sy/type/utility #FileIO #TokenManagement
+- **Tags:** #sy/type/utility, #sy/category/file-io
 - **Parameters:**
     - `tokens` (list, required)
     - `out_dir` (string, default: /storage/emulated/0/Documents/Laurel-catacomb/resources/links/notebooks/rogue-trader/en-token-guide/)
