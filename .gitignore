@@ -51,7 +51,9 @@ github-for-gemini.md
 merged_context.txt
 merged-context-2.txt
 
-Ignore/
+.ignore/
 .trash/
 Research
-.depreciated/
+.depreciation/
+
+temp/

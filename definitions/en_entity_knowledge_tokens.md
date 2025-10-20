@@ -25,7 +25,7 @@ This is the primary template for creative projects, used to define characters, l
 ```markdown
 ::EN-TOKEN-NAME::
 - **Summary:** [Short 1–2 line compressed essence of the token.]
-- **Tags:** [#Type/Character, #Type/Location, #Type/Item, #Type/LoreNode, #Type/Faction, #Type/Myth, #VaultName, #Narrative, #Concept, #WorldBuilding]
+- **Tags:** [#en/type/character, #en/type/item, #en/type/world, #en/category/game, #en/category/writing]
 - **Expanded Entry:** [Optional — contains longform definition, historical origin, gameplay/narrative function, context relationships, etc.]
 ```
 **Example:**
@@ -46,7 +46,7 @@ This template is for software development and systems administration, used to st
 ```markdown
 ::EN-TOKEN-NAME::
 - **Summary:** [A brief, one-sentence description of the data.]
-- **Tags:** [#Type/String, #Type/Number, #Type/URL, #Type/FilePath, #Type/DataStructure, #Type/Snippet, #name/projectname, #API, #Configuration, #Database, #Code]
+- **Tags:** [#en/type/fact, #en/type/guide, #en/category/info, #tech/api, #tech/db]
 - **Expanded Entry:** [The full value or detailed structure of the entity. This can be a simple string, a JSON object, or a multi-line code block.]
 ```
 **Example:**
@@ -67,7 +67,7 @@ This template is for capturing any general-purpose information that doesn't fit 
 ```markdown
 ::EN-TOKEN-NAME::
 - **Summary:** [Short 1–2 line compressed essence of the token.]
-- **Tags:** [#Type/Fact, #Type/Concept, #Type/Definition, #Type/Person, #Type/Organization, etc] 
+- **Tags:** [#en/type/index, #en/type/fact, #en/category/log, #en/project/myproject] 
 - **Expanded Entry:** [The full value or detailed structure of the entity.]
 ```
 **Example:**

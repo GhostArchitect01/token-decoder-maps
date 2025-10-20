@@ -18,7 +18,7 @@ These tokens serve as high-level directives instructing Gemini on a specific rea
 ## Token Template (for Cognitive Functions - Purely Definitional)
 ```markdown
 ::FX-COGNITIVE-FUNCTION-NAME::
-- Tags: [#Type/ReasoningStyle, #Type/CoT, #Type/ProblemSolvingMethod, #Type/ArgumentationStyle, #Cognitive, #MetaPrompt, #Strategy, #[SpecificDomain], etc.]
+- Tags: [#fx/type/review, #fx/type/cot, #fx/type/expert, #fx/category/analysis, #fx/category/persona]
 - Summary: [A clear, concise description of the approach, methodology, or reasoning style the LLM should adopt when this token is active.]
 ```
 

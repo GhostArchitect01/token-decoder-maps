@@ -7,7 +7,7 @@
     1.  Receives a `topic` (URL or string) as a parameter.
     2.  Executes the following chain: `::FX-EXTRACT-SEARCH-TERMS:: | ::FX-FIND-ALTERNATIVE-URLS::`
     3.  Outputs a list of found URLs.
-- **Tags:** #System, #Protocol, #Research-e 
+- **Tags:** #System  #Protocol  #Research-e 
 # ./FX-ZSH-INTERACTIVE-DEBUGGER.md
 
 ::FX-ZSH-INTERACTIVE-DEBUGGER::
@@ -49,7 +49,7 @@
     3.  Analyze the text to identify the core topic and key entities.
     4.  Formulate 2-3 precise search queries.
 - **Output:** A list of search query strings.
-- **Tags:** #Cognitive, #NLP, #Search-e 
+- **Tags:** #Cognitive  #NLP  #Search-e 
 # ./FX-FIND-ALTERNATIVE-URLS.md
 
 - **Type:** Cognitive Function
@@ -60,7 +60,7 @@
     3.  For each search result URL, briefly `web_fetch` the content to compare its title and summary with the original topic.
     4.  If a result is a high-confidence match for the original content, add its URL to a list.
 - **Output:** A list of validated, alternative URLs.
-- **Tags:** #Cognitive, #Search, #Evaluation-e 
+- **Tags:** #Cognitive  #Search  #Evaluation-e 
 # ./FX-EXTRACT-GAMEPLAY-INFO.md
 
 ::FX-EXTRACT-GAMEPLAY-INFO::

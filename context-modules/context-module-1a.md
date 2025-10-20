@@ -8,13 +8,13 @@
 This block defines the key directory paths for the TDM framework.
 All protocols and tokens should reference these variables.
 
-`$METRICA` = `~/storage/shared/Documents/Metrica`
+`$METRICA` = `~/storage/shared/Documents/Laurel-catacomb/Metrica`
 
-`$NOTES` = `~/storage/shared/Documents/Metrica/Notes`
+`$NOTES` = `~/storage/shared/Documents/Laurel-catacomb/Metrica/Notes`
 
-`$LIBRARY` = `~/storage/shared/Documents/Tdm-library`
+`$LIBRARY` = `~/storage/shared/Documents/Laurel-catacomb/Tdm-library`
 
-`$TAGONTOLOGY = ~/storage/shared/Documents/tdm-library/tag_ontology.md`
+`$TAGONTOLOGY = ~/storage/shared/Documents/Laurel-catacomb/Tdm-library/tag_ontology.md`
 
 ---
 
@@ -57,59 +57,31 @@ The DSL supports advanced operations for creating complex, on-the-fly instructio
 
 The Metrica Protocol is the TDM's primary module for hierarchical task management, utilizing a two-stream system to separate strategic goals from tactical execution.
 
-Metrica files are stored in master `$METRICA` directory
+Metrica files are stored in the master `$METRICA` directory.
 
-#### **3.1. Stream 1: User Tasks (`::MX-USER-TASK-ID::`)**
+##### **3.1. Stream 1: User Tasks (`::MX-USER-TASK-ID::`)**
 
-Each `::MX-USER::` token should exist as its own file (ie: `mx-user-task-001.md`).
+Each `::MX-USER-TASK-ID::` represents a high-level user goal and **MUST** exist as its own file (e.g., `MX-USER-TASK-001.md`).
 
-##### User Task Template
+##### **3.2. Stream 2: Project Tasks (`::MX-PROJECT-TASK-ID::`)**
 
-```markdown
-::MX-USER-TASK-ID::  
-- **Title:** [A short, clear title for the user's goal, e.g., "Build the TUI application"]
-- **Dependencies:** [Optional: Other ::MX-USER-TASK-ID:: tokens if any, using [[wikilink]] syntax]  
-- **Children:** [List of ::MX-PROJECT-TASK-ID::s that belong to this task, using [[wikilink]] syntax]
-- **Created:** [YYYY-MM-DD]  
-- **Updated:** [YYYY-MM-DD]
-- **Tags:** [#Type/UserTask, #Category/Personal, #Category/Goal, #Category/Learning, #metrica/status/, #metrica/priority/, etc]  
-- **Notes:** [High-level notes about the overall goal]
-```
+Each `::MX-PROJECT-TASK-ID::` represents a more granular, technical project that contributes to a user task. A single Project Task file acts as a container for one or more atomized sub-tasks, which are denoted by a letter suffix (e.g., `::MX-PROJECT-029A::`, `::MX-PROJECT-029B::`).
 
----
+- **File Structure:** The project as a whole (e.g., `::MX-PROJECT-029::`) is a single file (e.g., `MX-PROJECT-029.md`).
+- **Sub-Tasks:** The lettered sub-tasks are defined *within* that single file, typically separated by a horizontal rule (`---`). They are not separate files.
 
-### Stream 2: Project Tasks (`::MX-PROJECT-TASK-ID::`)
+##### **3.3. Hierarchy and Workflow**
 
-Project tasks are the specific, actionable sub-tasks required to complete a user task. They are more detailed and include fields for tracking technical progress.
-
-Project tokens are named by appending an alphabetical suffix to their parent user task ID, producing identifiers like `::MX-PROJECT-TASK-006A::,` `::MX-PROJECT-TASK-006B::`, etc. Suffixes advance in sequence (A–Z, then AA, AB, …), never reused once assigned. All such project tokens for a given user task are stored together in a single file named `mx-project-<ID>.md` (e.g. mx-project-006.md)
-
-### Project Task Template
-
-```markdown
-::MX-PROJECT-SUB-ID::  
-- **Title:** [A specific, actionable sub-task, e.g., "Implement command parser"]  
-- **Parent:** [The ::MX-USER-TASK-ID:: this contributes to, using [[wikilink]] syntax, e.g., [[metrica.md#::MX-USER-TASK-2025071801::]]]
-- **Framework:** [Optional: The language/ecosystem for the agent's persona, e.g., Python, Node.js, Rust]
-- **Dependencies:** [Optional: Other ::MX-PROJECT-TASK-ID::s that must be completed first, using [[wikilink]] syntax]
-- **Created:** [YYYY-MM-DD]
-- **Updated:** [YYYY-MM-DD]
-- **Tags:** [#Type/ProjectTask, #Category/ProjectName, #Category/Feature, #Category/Bug, #Category/Refactor, #ComponentName, #metrica/status/, #metrica/priority/, #tags]  
-- **Acceptance Criteria:**
-  - [ ] A clear, verifiable condition for completion.
-- **Notes:** [Technical details or context for this specific sub-task]
-```
-
-
-#### Hierarchy and Workflow
-
-1.  A user defines a high-level goal by creating a `::MX-USER-TASK-ID::`.
-2.  That goal is then broken down into one or more `::MX-PROJECT-TASK-ID::`s.
-3.  Each project task links back to the main user task via the `Parent` field.
-4.  This creates a clear, auditable trail from the high-level objective down to the individual implementation steps.
+1.  A user defines a high-level goal by creating a `::MX-USER-TASK-ID::` file.
+2.  That goal is then broken down into one or more `::MX-PROJECT-TASK-ID::` files.
+3.  Within a project file, the work is broken down further into lettered sub-tasks (`A`, `B`, `C`, etc.).
+4.  Each project task links back to the main user task via the `Parent` field.
+5.  This creates a clear, auditable trail from the high-level objective down to the individual implementation steps.
 
 ---
 
-#### **4. Tag Ontology**
+#### 4. Core Directive: Tag Ontology Adherence
 
-Always refer to $TAGONTOLOGY when creating or modifying ::PREFIX-TOKENS:: or their tags. 
+- **Canonical Source:** You MUST use the `$TAGONTOLOGY` file as the single source of truth for all tags.
+- **Validation:** All tags used during token creation or modification MUST be validated against this ontology.
+- **No Ad-hoc Tags:** You MUST NOT invent new tags that are not defined in the ontology.

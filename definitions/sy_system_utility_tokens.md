@@ -24,7 +24,7 @@ This template is used to define new system protocols, commands, or modes.
 ::SY-TOKEN-NAME::
 - **Type:** [System/Protocol, System/Utility, System/Mode]
 - **Summary:** [A brief, one-sentence description of the token's function.]
-- **Tags:** [#sy/type/protocol, #sy/type/utility, #sy/type/mode, #automation, #interactive, etc.]
+- **Tags:** [#sy/type/protocol, #sy/type/utility, #sy/category/metrica, #sy/category/file-io, #sy/category/web]
 - **Parameters:** [Optional: A list of arguments the token accepts.]
 - **Execution Workflow:** [Optional: A step-by-step description of the process the token executes.]
 ```

@@ -4,23 +4,23 @@
 The ontology is a namespaced, hierarchical system. The top-level tag namespace aligns with the token prefix it describes (e.g., #mx/ for ::MX- tokens). It uses a `#domain/category/value` structure and is intended to be stored in a single, canonical tag_ontology.md file ($TAGONTOLOGY) for the AI to reference on demand.
 
 #mx/ (Metrica Tokens)
- * #mx/user/status
-	 * #mx/project/status
-	 * #mx/agent/status
-   * pending
-   * done
-   * started
-   * obsolete
- * #mx/type/
-   * user
-   * project
-   * agent
- * #mx/category/
-   * build
-   * design
-   * system
-   * debug
-   * refactor
+
+A Metrica task is described using two primary hierarchical tags: one for its State and one for its Domain.
+### State Tags (`#mx/type/status/value`)
+* #mx/user/status/[status]
+* #mx/project/status/[status]
+* #mx/agent/status/[status]
+* **Allowed [status] values:** `pending`, `done`, `started`, `obsolete`
+
+### Domain Tags (`#mx/category/value`)
+* #mx/category/[category]
+* **Allowed [category] values:** `build`, `design`, `system`, `debug`, `refactor`
+
+**Example Usage:**
+A 'pending' 'User Task' related to 'build' would have two tags:
+- `#mx/user/status/pending`
+- `#mx/category/build`
+
 #fx/ (Function/Cognitive Tokens)
  * #fx/type/
    * review
@@ -60,6 +60,7 @@ The ontology is a namespaced, hierarchical system. The top-level tag namespace a
    * glyph
 
 Relational & Global Tags
+
  * #*/protocol/
    * Links a component token (like ::FX- or ::SY-) to the high-level protocol it serves (e.g., `#sy/protocol/daily-dispatcher)`.
  * #en/project/
