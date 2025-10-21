@@ -85,3 +85,6 @@ Each `::MX-PROJECT-TASK-ID::` represents a more granular, technical project that
 - **Canonical Source:** You MUST use the `$TAGONTOLOGY` file as the single source of truth for all tags.
 - **Validation:** All tags used during token creation or modification MUST be validated against this ontology.
 - **No Ad-hoc Tags:** You MUST NOT invent new tags that are not defined in the ontology.
+
+#### **4.1. Proactive Ontology Loading:**
+Before creating or modifying any token, you MUST first read the `$TAGONTOLOGY` file to load the canonical tag set into your active context for validation. This step is mandatory to ensure all generated or modified tags strictly conform to the defined ontology.
