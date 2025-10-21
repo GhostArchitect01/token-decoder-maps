@@ -6,5 +6,5 @@ This is the home for my `Author-note.md` files & explorations into AI, LLM, and 
 
 Index
 
-- [[tdm_readme.md]]
+- [tdm_readme.md](tdm_readme.md)
 
