@@ -50,7 +50,7 @@ This is accomplished via:
 
 - Modularity: Breaking workflows down into modular and reusable ::TOKENS::
 - Atomization: Breaking down tasks or processes into smaller, more explicit sub tasks
-- Self Referential Structure: By orchestrating the AIs entire context with the TDM Framework, the AI is subsumed into the role of a TDM agent, reinforcing its adherence to the framework (*This would by the 'recursive' component*)
+- Self Referential Structure: By orchestrating the AIs entire context with the TDM Framework, the AI is subsumed into the role of a TDM agent, reinforcing its adherence to the framework (*This would be the 'recursive' component*)
 
 
 

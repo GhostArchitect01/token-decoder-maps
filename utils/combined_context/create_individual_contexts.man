@@ -1,0 +1,39 @@
+CREATE_INDIVIDUAL_CONTEXTS(1) General Commands Manual CREATE_INDIVIDUAL_CONTEXTS(1)
+
+NAME
+     create_individual_contexts.py - Generate individual merged context files for AI review
+
+SYNOPSIS
+     python3 create_individual_contexts.py
+
+DESCRIPTION
+     This script concatenates the contents of specified directories into individual Markdown files.
+     Each output file includes a header, a directory tree of its source, and formatted content
+     from each included file. This is designed to provide AI agents with structured context
+     for review and analysis.
+
+     The script processes the following source directories:
+     - Metrica User Tasks: /storage/emulated/0/Documents/Laurel-catacomb/Metrica/MX-USER/
+     - Metrica Project Tasks: /storage/emulated/0/Documents/Laurel-catacomb/Metrica/MX-PROJECT/
+     - TDM Library EN Tokens: /storage/emulated/0/Documents/Laurel-catacomb/Tdm-library/EN-token-library/
+     - TDM Library FX Tokens: /storage/emulated/0/Documents/Laurel-catacomb/Tdm-library/FX-token-library/
+     - TDM Library SY Tokens: /storage/emulated/0/Documents/Laurel-catacomb/Tdm-library/SY-token-library/
+     - All non-hidden direct subdirectories of the root project directory
+       (/storage/emulated/0/Documents/Laurel-catacomb/token-decoder-framework-github/)
+
+     Only files with .md or .txt extensions are included. The content of each file within
+     the concatenated output is prefixed with its relative path and suffixed with a separator.
+
+OUTPUT
+     Concatenated files are stored in:
+     /storage/emulated/0/Documents/Laurel-catacomb/token-decoder-framework-github/merged_context/individual_contexts/
+
+     Each output file is named `[source_directory_name]_combined.md`.
+
+EXAMPLES
+     To run the script:
+           python3 create_individual_contexts.py
+
+SEE ALSO
+     create_combined_contexts.sh
+
